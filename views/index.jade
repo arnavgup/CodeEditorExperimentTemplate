@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p Task: #{desc}
+  #editorContainer
+    #editor
+
+  script(type='text/javascript' src='javascripts/editor/codemirror.js')
+  script(type='text/javascript' src='javascripts/editor/javascript.js')
+  script(type='text/javascript' src='javascripts/editorUtils.js')
+
+
+  #runContainer
+    #runButton
+      img#runIcon(src="images/run.svg" alt="Run Button")
+    p Press the run button to execute your code. Your output will show up below. //Note this is not implemented. Creating a sandboxed eval of the user's code is up to you :)
+
+  #outputContainer
